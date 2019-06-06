@@ -61,6 +61,8 @@ set noerrorbells visualbell t_vb=
 
 " set copy/paste - not needed in macvim
 vmap <Leader>y :w !pbcopy<CR>
+" this will do the same thing
+set clipboard=unnamed
 
 " Finding Files:
 
