@@ -1,0 +1,12 @@
+[alias]
+    st = !git status
+    in = !git fetch && git log --oneline ..@{u}
+    out = !git fetch && git log --oneline @{u}..
+    co = checkout
+    purge = clean -dfq
+    #purge = clean -d -f -x -q
+    #lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Cr'
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>'
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+[core]
+    excludesfile = ~/Source/.git_global_ignore
