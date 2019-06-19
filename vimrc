@@ -1,3 +1,6 @@
+"Set no compatible
+set nocompatible
+
 "Exit kj is escape
 inoremap kj <esc>
 
@@ -61,7 +64,6 @@ set noerrorbells visualbell t_vb=
 
 " set copy/paste - not needed in macvim
 vmap <Leader>y :w !pbcopy<CR>
-" this will do the same thing
 set clipboard=unnamed
 
 " Finding Files:
@@ -72,3 +74,23 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+" Folding:
+augroup AutoSaveFolds
+autocmd!
+autocmd BufWinLeave * mkview
+autocmd BufWinEnter * silent loadview
+augroup END
+
+
+" Ruby:
+" matchit do to end
+runtime macros/matchit.vim
+
+" Functions:
+" TrimWhitespace
+function TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfunction
