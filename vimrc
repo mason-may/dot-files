@@ -4,6 +4,8 @@ set nocompatible
 "Exit kj is escape
 inoremap kj <esc>
 
+" Allow hidden buffers
+set hidden
 " File defaults
 set enc=utf-8
 set number
@@ -74,6 +76,9 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+" Ignore class files when searching
+set wildignore=*.class
 
 " Folding:
 augroup AutoSaveFolds
