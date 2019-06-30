@@ -6,11 +6,20 @@ inoremap kj <esc>
 
 " Allow hidden buffers
 set hidden
+
+" Lazy redraw to speed up performance
+set lazyredraw
+
 " File defaults
 set enc=utf-8
-set number
-set wrap!
 syntax on
+
+" Don' wrap
+set wrap!
+
+" File numbers
+set relativenumber
+set number
 
 " Search setting
 set hlsearch
@@ -27,6 +36,10 @@ set sw=2
 
 " Expand tabs
 set et
+
+" Undo
+set undodir=~/.vim/undodir
+set undofile " Maintain undo history between sessions
 
 " Explorer
 " Sets directory to be sane
@@ -78,19 +91,31 @@ set path+=**
 set wildmenu
 
 " Ignore class files when searching
-set wildignore=*.class
+set wildignore=*.class,
+
+" Provides tab completion like zsh
+set wildmode=full
+" Other options for more like bash are longest,list
+" (these can both be active at once)
 
 " Folding:
-augroup AutoSaveFolds
-autocmd!
-autocmd BufWinLeave * mkview
-autocmd BufWinEnter * silent loadview
-augroup END
+"augroup AutoSaveFolds
+"autocmd!
+"autocmd BufWinLeave * mkview
+"autocmd BufWinEnter * silent loadview
+"augroup END
 
 
 " Ruby:
 " matchit do to end
 runtime macros/matchit.vim
+
+" run the ruby tests in the current file
+set makeprg=rspec\ %
+
+" auto format file with rubocop
+nmap <Leader>ra :!rubocop --safe-auto-correct %<CR>
+
 
 " Functions:
 " TrimWhitespace
@@ -99,3 +124,10 @@ function TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfunction
+
+" Plugins:
+" Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
