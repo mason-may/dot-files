@@ -14,6 +14,9 @@ set lazyredraw
 set enc=utf-8
 syntax on
 
+" Allow more history
+set history=200
+
 " Don' wrap
 set wrap!
 
@@ -69,13 +72,11 @@ let mapleader = ","
 " highlight the current line
 set cursorline
 
-
 " Built-in
 filetype plugin on
 
 " Disable bell sounds
 set noerrorbells visualbell t_vb=
-
 
 " set copy/paste - not needed in macvim
 vmap <Leader>y :w !pbcopy<CR>
