@@ -78,10 +78,6 @@ filetype plugin on
 " Disable bell sounds
 set noerrorbells visualbell t_vb=
 
-" set copy/paste - not needed in macvim
-vmap <Leader>y :w !pbcopy<CR>
-set clipboard=unnamed
-
 " Finding Files:
 
 " Search down into subfolders
