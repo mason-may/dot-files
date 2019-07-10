@@ -21,7 +21,7 @@ set history=200
 set wrap!
 
 " File numbers
-set relativenumber
+"set relativenumber
 set number
 
 " Search setting
