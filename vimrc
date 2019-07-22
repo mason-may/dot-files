@@ -17,11 +17,11 @@ syntax on
 " Allow more history
 set history=200
 
-" Don' wrap
+" Don't wrap
 set wrap!
 
 " File numbers
-set relativenumber
+"set relativenumber
 set number
 
 " Search setting
@@ -30,9 +30,15 @@ set ignorecase
 set smartcase
 set incsearch
 
+" Colors:
 " Color scheme
 colorscheme slate 
 
+" Sets the column color
+set colorcolumn=88
+hi ColorColumn ctermbg=black
+
+" Spacing:
 " Change tab to 2
 set sts=2
 set sw=2
@@ -56,6 +62,12 @@ set autoindent
 filetype indent on
 
 " Status Line:
+" Set status line
+"set statusline=
+"set statusline+=%{FugitiveStatusline()}
+"set statusline+=%#LineNr#
+"set statusline+=\ %f
+
 " Show current file name
 set laststatus=2
 " Display typed characters in status line
@@ -102,6 +114,10 @@ set wildmode=full
 "autocmd BufWinEnter * silent loadview
 "augroup END
 
+" Text Editing:
+" Take the first spelling correction
+nmap <Leader>sa :set spell! spelllang=en_us<CR>:set spell?<CR>
+nmap <Leader>s 1z=
 
 " Ruby:
 " matchit do to end
@@ -112,7 +128,6 @@ set makeprg=rspec\ %
 
 " auto format file with rubocop
 nmap <Leader>ra :!rubocop --safe-auto-correct %<CR>
-
 
 " Functions:
 " TrimWhitespace
