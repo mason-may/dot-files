@@ -94,7 +94,6 @@ filetype plugin on
 set noerrorbells visualbell t_vb=
 
 " Finding Files:
-
 " Search down into subfolders
 " Provides tab-completion for all file related tasks
 set path+=**
@@ -109,6 +108,9 @@ set wildignore=*.class,
 set wildmode=full
 " Other options for more like bash are longest,list
 " (these can both be active at once)
+
+" Ctags
+nmap <Leader>ct :!ctags -R .<CR>
 
 " Folding:
 "augroup AutoSaveFolds
