@@ -20,9 +20,12 @@ set history=200
 " Don't wrap
 set wrap!
 
-" File numbers
-"set relativenumber
+" File Numbers:
+" set numbers
 set number
+
+" show cursor position
+set ruler
 
 " Search setting
 set hlsearch
