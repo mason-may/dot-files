@@ -53,6 +53,9 @@ set et
 set undodir=~/.vim/undodir
 set undofile " Maintain undo history between sessions
 
+" Set backup file
+set dir=~/.vim/backup//
+
 " Explorer
 " Sets directory to be sane
 let g:netrw_liststyle = 3
@@ -148,3 +151,7 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+
+
+" Adding FZF to vim
+set rtp+=~/.fzf
