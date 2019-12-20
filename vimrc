@@ -35,7 +35,9 @@ set incsearch
 
 " Colors:
 " Color scheme
-colorscheme slate 
+"colorscheme slate
+" https://github.com/romainl/Apprentice
+colorscheme apprentice
 
 " Sets the column color
 set colorcolumn=88
@@ -54,7 +56,7 @@ set undodir=~/.vim/undodir
 set undofile " Maintain undo history between sessions
 
 " Set backup file
-set dir=~/.vim/backup//
+set dir=~/.vim/backup/
 
 " Explorer
 " Sets directory to be sane
@@ -131,9 +133,6 @@ nmap <Leader>s 1z=
 " matchit do to end
 runtime macros/matchit.vim
 
-" run the ruby tests in the current file
-set makeprg=rspec\ %
-
 " auto format file with rubocop
 nmap <Leader>ra :!rubocop --safe-auto-correct %<CR>
 
@@ -150,8 +149,6 @@ endfunction
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-
-
 
 " Adding FZF to vim
 set rtp+=~/.fzf
