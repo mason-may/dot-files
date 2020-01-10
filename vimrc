@@ -132,6 +132,11 @@ nmap <Leader>s 1z=
 " Ruby:
 " matchit do to end
 runtime macros/matchit.vim
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby compiler ruby
 
 " auto format file with rubocop
 nmap <Leader>ra :!rubocop --safe-auto-correct %<CR>
@@ -152,3 +157,10 @@ endif
 
 " Adding FZF to vim
 set rtp+=~/.fzf
+
+" Plugins that I installed
+" fzf
+" surround
+" fugitive
+" repeat
+" Color apprentice
