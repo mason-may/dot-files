@@ -35,9 +35,9 @@ set incsearch
 
 " Colors:
 " Color scheme
-"colorscheme slate
+colorscheme slate
 " https://github.com/romainl/Apprentice
-colorscheme apprentice
+"colorscheme apprentice
 
 " Sets the column color
 set colorcolumn=88
@@ -151,6 +151,8 @@ endfunction
 
 " Plugins:
 " Ack
+" mkdir -p ~/.vim/plugin
+" git clone https://github.com/mileszs/ack.vim.git ~/.vim/plugin/ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
