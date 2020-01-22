@@ -162,6 +162,8 @@ set rtp+=~/.fzf
 
 " Plugins that I installed
 " fzf
+" git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+" ~/.fzf/install
 " surround
 " fugitive
 " repeat
