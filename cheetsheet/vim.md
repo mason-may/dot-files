@@ -53,4 +53,9 @@ setlocal omnifunc=syntaxcomplete#Complete
 Look at this later
 Things to look at later
 filename-modifiers
+
+" Searching
+\zs	anything, sets start of match
+\ze	anything, sets end of match
+
 ```
