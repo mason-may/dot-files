@@ -1,3 +1,15 @@
+"Here are the steps for using this in your main vimrc file
+"
+"source ~/personal/dot-files/vimrc
+
+"set rtp+=~/personal/tabnine-vim/
+
+"set dir=~/.vim/backup//
+
+" Adding FZF to vim
+"set rtp+=~/.fzf
+
+"Main:
 "Set no compatible
 set nocompatible
 
