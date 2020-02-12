@@ -178,5 +178,6 @@ set rtp+=~/.fzf
 " ~/.fzf/install
 " surround
 " fugitive
+" https://github.com/tpope/vim-fugitive
 " repeat
 " Color apprentice
