@@ -58,4 +58,7 @@ filename-modifiers
 \zs	anything, sets start of match
 \ze	anything, sets end of match
 
+" Finding files and piping them to argsdo
+find . -name "*.txt" | xargs -o vim
+
 ```

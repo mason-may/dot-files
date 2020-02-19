@@ -177,6 +177,10 @@ set rtp+=~/.fzf
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 " ~/.fzf/install
 " surround
+" mkdir -p ~/.vim/pack/tpope/start
+" cd ~/.vim/pack/tpope/start
+" git clone https://tpope.io/vim/surround.git
+" vim -u NONE -c "helptags surround/doc" -c q
 " fugitive
 " https://github.com/tpope/vim-fugitive
 " repeat
