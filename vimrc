@@ -184,4 +184,7 @@ set rtp+=~/.fzf
 " fugitive
 " https://github.com/tpope/vim-fugitive
 " repeat
+" mkdir -p ~/.vim/pack/tpope/start
+" cd ~/.vim/pack/tpope/start
+" git clone https://tpope.io/vim/repeat.git
 " Color apprentice
