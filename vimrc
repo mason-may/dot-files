@@ -48,12 +48,14 @@ set incsearch
 " Colors:
 " Color scheme
 colorscheme slate
+" This is a good color if you have a light background
+" colorscheme koehler
 " https://github.com/romainl/Apprentice
-"colorscheme apprentice
+" colorscheme apprentice
 
 " Sets the column color
-set colorcolumn=88
-hi ColorColumn ctermbg=black
+"set colorcolumn=88
+"hi ColorColumn ctermbg=black
 
 " Spacing:
 " Change tab to 2
@@ -140,6 +142,12 @@ nmap <Leader>ct :!ctags -R .<CR>
 " Take the first spelling correction
 nmap <Leader>sa :set spell! spelllang=en_us<CR>:set spell?<CR>
 nmap <Leader>s 1z=
+
+" PlantUML:
+" This is for plantuml
+" Note you'll need to change where the plantuml.jar is located
+nmap <Leader>um :!java -jar ~/Downloads/plantuml.jar %:p<CR>
+
 
 " Ruby:
 " matchit do to end

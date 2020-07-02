@@ -3,6 +3,9 @@
 This is a living document that I use to remind myself of cool things vim can do
 
 ```
+" Colors
+" This will remove the colorcolumn for the current buffer
+set cc=
 " Tags
 ctrl + ] " go to definition from ctag
 ctrl + W  }	"Preview definition
