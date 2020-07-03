@@ -131,6 +131,9 @@ set wildmode=full
 " Ctags
 nmap <Leader>ct :!ctags -R .<CR>
 
+" Remove double lines
+nmap <Leader>bl :%!cat -s<cr>
+
 " Folding:
 "augroup AutoSaveFolds
 "autocmd!
@@ -147,7 +150,6 @@ nmap <Leader>s 1z=
 " This is for plantuml
 " Note you'll need to change where the plantuml.jar is located
 nmap <Leader>um :!java -jar ~/Downloads/plantuml.jar %:p<CR>
-
 
 " Ruby:
 " matchit do to end
@@ -179,7 +181,28 @@ endif
 
 " Adding FZF to vim
 set rtp+=~/.fzf
+let g:fzf_layout = { 'down': '~30%' }
+nmap <C-p> :FZF<cr>
 
+"Plugins with vim-plug
+call plug#begin('~/.vim/plugged')
+
+" FZF
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Surround
+Plug 'tpope/vim-surround'
+" Fugitive
+Plug 'tpope/vim-fugitive'
+" Repeat
+Plug 'tpope/vim-repeat'
+" Ack
+Plug 'mileszs/ack.vim'
+" Polygot
+Plug 'sheerun/vim-polyglot'
+" Tagbar
+Plug 'majutsushi/tagbar'
+
+call plug#end()
 " Plugins that I installed
 " fzf
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
