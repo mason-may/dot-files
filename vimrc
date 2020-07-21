@@ -184,6 +184,8 @@ set rtp+=~/.fzf
 let g:fzf_layout = { 'down': '~30%' }
 nmap <C-p> :FZF<cr>
 
+" Turn off markdown
+let g:polyglot_disabled = ['markdown']
 "Plugins with vim-plug
 call plug#begin('~/.vim/plugged')
 
