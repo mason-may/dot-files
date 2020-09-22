@@ -204,6 +204,8 @@ Plug 'sheerun/vim-polyglot'
 " Tagbar
 Plug 'majutsushi/tagbar'
 
+" Papercolor
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 " Plugins that I installed
 " fzf
