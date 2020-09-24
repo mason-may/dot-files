@@ -39,6 +39,10 @@ set number
 " show cursor position
 set ruler
 
+" Scroll to show a few lines 
+set scrolloff=3
+set sidescrolloff=5
+
 " Search setting
 set hlsearch
 set ignorecase
