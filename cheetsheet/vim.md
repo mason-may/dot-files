@@ -45,6 +45,9 @@ setlocal omnifunc=syntaxcomplete#Complete
 "Diff
 :diffthis  " on each pane
 
+" Non-printable character
+:set list
+
 "Session
 :mksession ~/.vim/session/<thing>.vim
 :source ~/.vim/session/<thing>.vim

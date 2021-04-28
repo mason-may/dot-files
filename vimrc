@@ -49,18 +49,6 @@ set ignorecase
 set smartcase
 set incsearch
 
-" Colors:
-" Color scheme
-colorscheme slate
-" This is a good color if you have a light background
-" colorscheme koehler
-" https://github.com/romainl/Apprentice
-" colorscheme apprentice
-
-" Sets the column color
-"set colorcolumn=88
-"hi ColorColumn ctermbg=black
-
 " Spacing:
 " Change tab to 2
 set sts=2
@@ -135,9 +123,6 @@ set wildmode=full
 " Ctags
 nmap <Leader>ct :!ctags -R .<CR>
 
-" Remove double lines
-nmap <Leader>bl :%!cat -s<cr>
-
 " Folding:
 "augroup AutoSaveFolds
 "autocmd!
@@ -175,6 +160,17 @@ function TrimWhitespace()
     call winrestview(l:save)
 endfunction
 
+" Remove double lines
+function! TrimDoubleBlankLines()
+  execute "%" "!" "cat -s"
+endfunction
+
+" Format file as json
+"nmap <Leader>js :%!python -m json.tool<cr>
+function! FormatFileAsJson()
+  execute "%" "!" "python -m json.tool"
+endfunction
+
 " Plugins:
 " Ack
 " mkdir -p ~/.vim/plugin
@@ -207,8 +203,10 @@ Plug 'mileszs/ack.vim'
 Plug 'sheerun/vim-polyglot'
 " Tagbar
 Plug 'majutsushi/tagbar'
+" csv.vim
+Plug 'chrisbra/csv.vim'
 
-" Papercolor
+" PaperColor
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 " Plugins that I installed
@@ -226,4 +224,17 @@ call plug#end()
 " mkdir -p ~/.vim/pack/tpope/start
 " cd ~/.vim/pack/tpope/start
 " git clone https://tpope.io/vim/repeat.git
-" Color apprentice
+
+" Colors:
+" This relies on the plugin so the plugin needs to be loaded first
+" Color scheme
+colorscheme PaperColor
+"colorscheme slate
+" This is a good color if you have a light background
+" colorscheme koehler
+" https://github.com/romainl/Apprentice
+" colorscheme apprentice
+
+" Sets the column color
+"set colorcolumn=88
+"hi ColorColumn ctermbg=black
