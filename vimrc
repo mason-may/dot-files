@@ -206,6 +206,9 @@ Plug 'majutsushi/tagbar'
 " csv.vim
 Plug 'chrisbra/csv.vim'
 
+" NERDTree
+Plug 'preservim/nerdtree'
+
 " PaperColor
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
@@ -234,6 +237,9 @@ colorscheme PaperColor
 " colorscheme koehler
 " https://github.com/romainl/Apprentice
 " colorscheme apprentice
+
+" Nerdtree settings
+let NERDTreeShowHidden=1
 
 " Sets the column color
 "set colorcolumn=88
