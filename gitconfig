@@ -10,3 +10,6 @@
     cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 [core]
     excludesfile = ~/.git_global_ignore
+[pull]
+    # this will fast forward if possible and merge if it has to
+    ff = true
