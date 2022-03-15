@@ -247,6 +247,7 @@ colorscheme PaperColor
 
 " Nerdtree settings
 let NERDTreeShowHidden=1
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Sets the column color
 "set colorcolumn=88
