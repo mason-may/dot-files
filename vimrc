@@ -16,6 +16,9 @@ set nocompatible
 "Exit kj is escape
 inoremap kj <esc>
 
+" Change Directory to current directory
+nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
+
 " Allow hidden buffers
 set hidden
 
@@ -168,7 +171,7 @@ endfunction
 " Format file as json
 "nmap <Leader>js :%!python -m json.tool<cr>
 function! FormatFileAsJson()
-  execute "%" "!" "python -m json.tool"
+  execute "%" "!" "python3 -m json.tool"
 endfunction
 
 " Plugins:
@@ -218,6 +221,9 @@ Plug 'preservim/nerdtree'
 
 " PaperColor
 Plug 'NLKNguyen/papercolor-theme'
+
+" Aurora
+Plug 'ray-x/aurora'
 call plug#end()
 " Plugins that I installed
 " fzf
@@ -244,6 +250,11 @@ colorscheme PaperColor
 " colorscheme koehler
 " https://github.com/romainl/Apprentice
 " colorscheme apprentice
+set termguicolors            " 24 bit color
+"let g:aurora_italic = 1     " italic
+"let g:aurora_bold = 1     " bold
+
+"colorscheme aurora
 
 " Nerdtree settings
 let NERDTreeShowHidden=1

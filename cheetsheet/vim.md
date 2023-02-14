@@ -4,6 +4,9 @@ This is a living document that I use to remind myself of cool things vim can do
 
 ```
 " Colors
+" With the latest version of Vim I've needed to add the following to a plugin
+" mkdir -p ~/.vim/after/plugin/color.vim
+" colorscheme PaperColor
 " This will remove the colorcolumn for the current buffer
 set cc=
 " Tags
@@ -63,6 +66,7 @@ filename-modifiers
 " Searching
 \zs	anything, sets start of match
 \ze	anything, sets end of match
+\v Changes to use regex using very magic
 
 " Finding files and piping them to argsdo
 find . -name "*.txt" | xargs -o vim
