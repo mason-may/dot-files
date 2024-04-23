@@ -263,3 +263,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " Sets the column color
 "set colorcolumn=88
 "hi ColorColumn ctermbg=black
+
+" Remember Folds
+"autocmd BufWinLeave * mkview
+"autocmd BufWinEnter * loadview

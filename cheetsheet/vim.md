@@ -71,4 +71,13 @@ filename-modifiers
 " Finding files and piping them to argsdo
 find . -name "*.txt" | xargs -o vim
 
+" Folds
+" This will create a fold. You can use it with a motion or visually select lines
+zf
+
+" This will delete the fold at the cursor
+zd
+" This will delete all folds in the file
+zE
+
 ```
