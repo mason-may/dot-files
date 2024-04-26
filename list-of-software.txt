@@ -7,3 +7,6 @@ intellij
 1Password
 docker
 fd
+
+**Needs  GUI**
+Insomnium: https://github.com/ArchGPT/insomnium
