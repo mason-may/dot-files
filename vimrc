@@ -19,6 +19,9 @@ inoremap kj <esc>
 " Change Directory to current directory
 nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
+" Open file in a new tab
+nnoremap <Leader>o 0y$:tabedit 0
+
 " Allow hidden buffers
 set hidden
 
