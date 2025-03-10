@@ -28,6 +28,9 @@ set hidden
 " Lazy redraw to speed up performance
 set lazyredraw
 
+" Omni complete will look in any open files
+set complete+=w
+
 " File defaults
 set enc=utf-8
 syntax on
