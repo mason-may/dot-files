@@ -7,6 +7,7 @@ intellij
 1Password
 docker
 fd
+asciinema cli
+bruno
+ripgrep
 
-**Needs  GUI**
-Insomnium: https://github.com/ArchGPT/insomnium
