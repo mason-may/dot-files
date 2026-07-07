@@ -158,6 +158,17 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby compiler ruby
 
+" Tagbar toggle
+nmap <F8> :TagbarToggle<CR>
+
+" Let Gutentags manage tags
+let g:gutentags_enabled = 1
+let g:gutentags_generate_on_write = 1
+let g:gutentags_ctags_executable = 'ctags'
+
+" Set tegs
+set tags=.tags;
+
 " auto format file with rubocop
 nmap <Leader>ra :!rubocop --safe-auto-correct %<CR>
 
@@ -217,8 +228,6 @@ Plug 'tpope/vim-repeat'
 Plug 'mileszs/ack.vim'
 " Polygot
 Plug 'sheerun/vim-polyglot'
-" Tagbar
-Plug 'majutsushi/tagbar'
 " csv.vim
 Plug 'chrisbra/csv.vim'
 
@@ -230,6 +239,18 @@ Plug 'NLKNguyen/papercolor-theme'
 
 " Aurora
 Plug 'ray-x/aurora'
+
+" Syntax + indent
+Plug 'vim-ruby/vim-ruby'
+
+" Tagbar for class/method tree
+Plug 'preservim/tagbar'
+
+" Gutentags auto-updates tags
+Plug 'ludovicchabant/vim-gutentags'
+
+" Colors
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 " Plugins that I installed
 " fzf
@@ -250,7 +271,7 @@ call plug#end()
 " Colors:
 " This relies on the plugin so the plugin needs to be loaded first
 " Color scheme
-colorscheme PaperColor
+colorscheme catppuccin_mocha
 "colorscheme slate
 " This is a good color if you have a light background
 " colorscheme koehler

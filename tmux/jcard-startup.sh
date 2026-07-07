@@ -7,6 +7,7 @@ SESSION="jcard"
 JCARD_DIR="$HOME/source/marqeta-jpos/"
 JCARD_LOGS_DIR="/var/log/jcard/"
 GENERAL_NOTES_DIR="$HOME/notes"
+ISO_SENDER="$HOME/source/iso-message-sender/"
 
 # Kill existing session if it exists
 tmux kill-session -t "$SESSION" 2>/dev/null
@@ -18,7 +19,7 @@ tmux new-session -d -s "$SESSION" -n "jcard" -c "$JCARD_DIR"
 tmux split-window -v -t "$SESSION:jcard" -c "$JCARD_DIR"
 
 # Send the Maven command to the lower pane but don't block execution
-tmux send-keys -t "$SESSION:jcard.1" "mqc --mq01 --account-name mq01-qa --role-name team-transaction-engine-dev --region-name us-east-1 && mvn -pl jcard -am package -DskipTests=true" C-m
+tmux send-keys -t "$SESSION:jcard.1" "mqc --mq01 --account-name mq01-qa --role-name team-transaction-engine-dev --region-name us-east-1 && mvn -pl jcard -am package -DskipTests=true && cd jcard && tar -vxf target/mqpay-jcard-1.0.TO_BE_FILLED.tar --directory target " C-m
 
 # Create the second window for logs
 tmux new-window -t "$SESSION:" -n "jcard logs" -c "$JCARD_LOGS_DIR"
@@ -27,6 +28,9 @@ tmux send-keys -t "$SESSION:jcard logs" "cd .. && cd jcard" C-m  # Open Vim in t
 
 # Create the third window for general Vim
 tmux new-window -t "$SESSION:" -n "general notes" -c "$GENERAL_NOTES_DIR"
+
+# Create fourth window for iso-message-sender
+tmux new-window -t "$SESSION:" -n"iso-message-sender" -c "$ISO_SENDER"
 
 # Select the first window as the default
 tmux select-window -t "$SESSION:jcard.0"
